@@ -53,3 +53,45 @@ int main(){
     for(int i = 0 ; i < 5 ; i++) cout << input[i] << " ";
     return 0;
 }
+
+
+
+
+
+
+
+
+
+//bubble sort
+//stable sort
+//time complexcity is O(n * n)
+//space complexcity is O(1)
+#include <iostream>
+using namespace std;
+
+int main(){
+    int ar[] = {2,-1,4,-2,1,4};
+    int n = sizeof(ar) / sizeof(ar[0]);
+    for(int i = 0 ; i < n ; i++) cout << ar[i] << " ";
+    cout << endl << endl;
+
+    for(int i = 0 ; i < n - 1 ; i++){
+        bool flag = true;
+        for(int j = 0 ; j < n - i ; j++){
+            if(ar[j] > ar[j + 1]) {
+                swap(ar[j],ar[j + 1]);
+                flag = false;
+            }
+        }
+        if(flag) break;
+    }
+
+    for(int i = 0 ; i < n ; i++) cout << ar[i] << " ";
+    return 0;
+}
+
+
+
+
+//Selection sort
+
